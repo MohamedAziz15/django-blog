@@ -9,7 +9,15 @@
 
 <body>
 
-    {{post}}
+    <h3>{{post}}</h3>
+
+    <a href="/blog/{{post.id}}/edit">Edit Post </a>
+
+
+    <a href="/blog/{{post.id}}/Delete">Delete Post </a>
+
+
+    <hr>
 
     <img src="{{post.image.url}}" alt="">
     <p>{{post.content}}</p>
