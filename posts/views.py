@@ -39,7 +39,12 @@ def edit_post(request, post_id):
             myform.author = request.user
             myform.save()
             return redirect('/blog/')
-
     else:
         form = postform(instance=data)
     return render(request, 'edit.html', {'form': form})
+
+
+def delete_post(request, post_id):
+    data = post.objects.get(id=post_id)
+    data.delete()
+    return redirect('/blog/')
