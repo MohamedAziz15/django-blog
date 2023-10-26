@@ -8,7 +8,7 @@ class Postlist(generic.ListView):
     # return templates = post_list.html
 
 
-class postDetail(generic.DeleteView):
+class postDetail(generic.DetailView):
     model = post
     # context = post
 
@@ -29,4 +29,3 @@ class Editpost(generic.UpdateView):
 class DeletePost(generic.DeleteView):
     model = post
     success_url = '/blog/'
-
